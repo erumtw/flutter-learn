@@ -4,11 +4,11 @@ class ForecastCard extends StatelessWidget {
   final String times;
   final IconData icon;
   final String temperature;
-  
+
   const ForecastCard({
-    super.key, 
-    required this.times, 
-    required this.icon, 
+    super.key,
+    required this.times,
+    required this.icon,
     required this.temperature,
   });
 
@@ -27,7 +27,9 @@ class ForecastCard extends StatelessWidget {
           children: [
             Text(
               times,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
             const SizedBox(height: 10),
             Icon(
